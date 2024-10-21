@@ -1,0 +1,42 @@
+function reverseWords(words) {
+    return words.map(word => word.split('').reverse().join(''));
+    function filterWordsEndingWithEr(words) {
+        let result = [];
+        
+        for (let i = 0; i < words.length; i++) {
+          if (!words[i].endsWith('er')) {
+            result.push(words[i]);
+          }
+        }
+        
+        return result;
+      }
+
+    class NumberManipulator {
+        constructor(value) {
+          this.value = value;
+        }
+       add(number) {
+          this.value += number;
+          return this.value;
+        }
+        subtract(number) {
+          this.value -= number;
+          return this.value;
+        }
+        multiply(number) {
+          this.value *= number;
+          return this.value;
+        }
+        divide(number) {
+          if (number === 0) {
+            throw new Error("Cannot divide by zero.");
+          }
+          this.value /= number;
+          return this.value;
+        }
+        getValue() {
+          return this.value;
+        }
+      }
+}
